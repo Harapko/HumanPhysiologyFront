@@ -1,0 +1,60 @@
+.reviews {
+  width: 100%;
+  height: 584px;
+  background-color: #d3d3d3;
+}
+.reviews__title {
+  color: #030303;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  padding-top: 96px;
+}
+.reviews__comments {
+  position: relative;
+  width: 313px;
+  height: 312px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  padding-top: 32px;
+  padding-left: 24px;
+}
+.reviews__comments__text {
+  padding-top: 32px;
+  color: #000000;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 300;
+}
+.reviews__comments__account {
+  display: flex;
+  position: absolute;
+  bottom: 24px;
+}
+.reviews__comments__account__detail {
+  align-self: center;
+  padding-left: 12px;
+}
+.reviews__comments__account__detail__name {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.05px;
+  line-height: 21px;
+}
+.reviews__comments__account__detail__profession {
+  color: #000000;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding-top: 48px;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=reviews.component.css.map */

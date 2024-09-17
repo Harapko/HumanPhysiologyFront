@@ -5,7 +5,6 @@
   height: 73px;
   background-color: #000000;
   color: white;
-  font-family: "Source Sans 3", sans-serif;
 }
 .header__logo {
   justify-self: start;
@@ -75,8 +74,8 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 400px 600px 330px;
-  width: 1340px;
+  grid-template-columns: minmax(100px, 400px) minmax(100px, 600px) minmax(100px, 330px);
+  max-width: 1340px;
   margin: 0 auto;
 }
 

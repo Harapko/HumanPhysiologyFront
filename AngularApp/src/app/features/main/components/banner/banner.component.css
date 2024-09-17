@@ -1,0 +1,47 @@
+.banner {
+  width: 100%;
+  height: 778px;
+}
+.banner__photo {
+  justify-self: center;
+}
+.banner__text {
+  padding-top: 24px;
+  color: #000000;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: center;
+}
+.banner__button {
+  margin-top: 64px;
+  cursor: pointer;
+  width: 150px;
+  height: 49px;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 16px;
+  line-height: 21px;
+  outline: none;
+  justify-self: center;
+}
+.banner__button:hover {
+  background-color: white;
+  color: #000000;
+  border: 1px solid #000000;
+  transition: 0.4s ease-in-out;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  justify-content: center;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-top: 125px;
+}
+
+/*# sourceMappingURL=banner.component.css.map */

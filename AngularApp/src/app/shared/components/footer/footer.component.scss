@@ -1,11 +1,10 @@
 .footer {
-  position: absolute;
-  bottom: 0;
+  clear: both;
+  position: relative;
   height: 259px;
   width: 100%;
   background-color: black;
   color: white;
-  font-family: "Source Sans 3", sans-serif;
 
   &__logo {
     display: flex;
@@ -73,9 +72,9 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 370px 770px 200px;
+  grid-template-columns: minmax(100px, 370px) minmax(100px, 770px) minmax(100px, 200px);
   padding: 20px 0;
-  width: 1340px;
+  max-width: 1340px;
   margin: 0 auto;
 }
 
