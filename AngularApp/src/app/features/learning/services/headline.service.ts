@@ -1,5 +1,5 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {BehaviorSubject, catchError, Observable, throwError} from "rxjs";
 import {Headline} from "../interfaces/Headline";
 import {ArticleService} from "./article.service";
