@@ -1,11 +1,11 @@
 <div class="header">
   <div class="wrapper">
-    <div class="header__logo">
+    <div [routerLink]="['']" class="header__logo">
       <img ngSrc="assets/icons/brain.png" alt="IconBrain" height="32" width="32">
       <a href="" class="header__logo__title">Human Physiology</a>
     </div>
     <nav class="header__nav">
-      <a href="" class="header__nav__element">Anatomy</a>
+      <a [routerLink]="['learn']" class="header__nav__element">Anatomy</a>
       <a href="" class="header__nav__element">Understanding</a>
       <a href="" class="header__nav__element">Importance</a>
       <a href="" class="header__nav__element">Practice</a>

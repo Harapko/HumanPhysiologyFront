@@ -1,0 +1,26 @@
+<div class="section">
+  <div class="wrapper">
+    <div class="section__title">Engage in Learning</div>
+    <nav class="section__navigation">
+      @if (this.allSection$ | async; as sections) {
+        @for (section of sections; track section) {
+          <button (click)="buttonClick(section.id)" class="section__navigation__element">{{ section.sectionName }}</button>
+          <i class="bi bi-trash"></i>
+        }
+      }
+      @if (isAddSectionFromVisible()) {
+        <div class="section__navigation__add">
+          <form [formGroup]="addSectionFG" (ngSubmit)="postAddSection()">
+            <label class="section__navigation__add__label">Section Title</label>
+            <input formControlName="title" class="section__navigation__add__input" type="text">
+            <button class="section__navigation__add__button" type="submit">Add</button>
+          </form>
+        </div>
+      }
+      <button (click)="isAddSectionFromVisible.set(!isAddSectionFromVisible())" class="section__navigation__element">+
+        Add Section
+
+      </button>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.section {
+  width: 100%;
+  color: black;
+  &__title {
+    margin-top: 48px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    &__element {
+      padding: 0 10px;
+      width: auto;
+      height: 34px;
+      border: 0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 18px;
+      outline: none;
+      transition: 0.3s ease-in-out;
+
+      &:last-child{
+        color: red;
+      }
+      &:hover{
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+      }
+    }
+
+    &__add{
+      display: flex;
+      align-items: center;
+      &__label{
+        margin-right: 8px;
+      }
+
+      &__input{
+        border: 1px solid #000;
+      }
+
+      &__button{
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  max-width: 1340px;
+  margin: 0 auto;
+}

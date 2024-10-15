@@ -1,0 +1,17 @@
+<div class="article">
+  <div class="wrapper">
+    <div class="article__title">Article</div>
+    <div class="article__list">
+      @if (articleList$ | async; as articles){
+        @for (article of articles; track article){
+          <div class="article__list__element">
+            <img class="article__list__element__photo" ngSrc="assets/images/articlePhotos/articleTest.jpeg" alt=""
+                 height="183" width="275">
+            <div class="article__list__element__title">{{article.title}}</div>
+          </div>
+        }
+      }
+
+    </div>
+  </div>
+</div>
