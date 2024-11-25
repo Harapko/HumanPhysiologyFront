@@ -27,9 +27,7 @@
   line-height: 18px;
   outline: none;
   transition: 0.3s ease-in-out;
-}
-.section__navigation__element:last-child {
-  color: red;
+  margin-right: 10px;
 }
 .section__navigation__element:hover {
   color: black;
@@ -48,6 +46,26 @@
 }
 .section__navigation__add__button {
   margin-left: 8px;
+}
+.section__navigation__update {
+  display: flex;
+  align-items: center;
+}
+.section__navigation__update__label {
+  margin-right: 8px;
+}
+.section__navigation__update__input {
+  border: 1px solid #000;
+}
+.section__navigation__update__button {
+  margin-left: 8px;
+}
+.section__navigation__trash {
+  cursor: pointer;
+}
+.section__navigation__pencil {
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 .wrapper {

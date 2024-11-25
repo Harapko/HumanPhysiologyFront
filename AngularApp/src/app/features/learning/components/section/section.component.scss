@@ -26,9 +26,9 @@
       line-height: 18px;
       outline: none;
       transition: 0.3s ease-in-out;
+      margin-right: 10px;
 
       &:last-child{
-        color: red;
       }
       &:hover{
         color: black;
@@ -51,6 +51,31 @@
       &__button{
         margin-left: 8px;
       }
+    }
+
+    &__update{
+      display: flex;
+      align-items: center;
+      &__label{
+        margin-right: 8px;
+      }
+
+      &__input{
+        border: 1px solid #000;
+      }
+
+      &__button{
+        margin-left: 8px;
+      }
+    }
+
+    &__trash{
+      cursor: pointer;
+    }
+
+    &__pencil{
+      cursor: pointer;
+      margin-right: 5px;
     }
   }
 }

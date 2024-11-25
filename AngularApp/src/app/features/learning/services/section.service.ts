@@ -18,4 +18,13 @@ export class SectionService {
   public postAddSection(data: FormData) : Observable<string> {
     return this.http.post<string>(`${this.baseUrl}CreateSection`, data)
   }
+
+  public putUpdateSection(data: FormData) : Observable<string> {
+    return this.http.put<string>(`${this.baseUrl}UpdateSection`, data)
+  }
+
+  public deleteSection(id: string) : Observable<string> {
+    return this.http.delete<string>(`${this.baseUrl}DeleteSection?id=${id}`)
+  }
+
 }
