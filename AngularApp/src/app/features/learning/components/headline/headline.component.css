@@ -31,6 +31,24 @@
   line-height: 21px;
   text-align: center;
 }
+.headline__topic__icon {
+  align-self: center;
+  font-size: 30px;
+}
+.headline__topic__form-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headline__topic__form-add__icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.headline__topic__form-add__input {
+  border: 1px solid #000;
+}
 
 .wrapper {
   max-width: 1340px;

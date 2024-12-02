@@ -29,4 +29,8 @@ export class HeadlineService {
   public changeVariable(newValue: string) {
     this._variable.next(newValue);
   }
+
+  public postAddHeadline(data: FormData) : Observable<string>{
+    return this.http.post<string>(`${this.baseUrl}CreateHeadline`, data)
+  }
 }

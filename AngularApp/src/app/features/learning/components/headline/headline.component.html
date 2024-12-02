@@ -4,13 +4,31 @@
     <div class="headline__topic">
       @if (this.headlineList$ | async; as headlines){
         @for (headline of headlines; track headline){
-          <div (click)="buttonClick(headline.id)" class="headline__topic__element">
+          <div (click)="changeArticle(headline.id)" class="headline__topic__element">
             <img ngSrc="assets/images/headlinePhotos/headline1.png" alt="" class="headline__topic__element__photo"
                  height="112" width="147">
             <div class="headline__topic__element__title">{{headline.title}}</div>
           </div>
         }
       }
+      @if (isCreateHeadlineFormVisible()){
+        <div class="headline__topic__form-add">
+          <form [formGroup]="addHeadlineFG" action="">
+            <i (click)="fileInput.click()" class="bi bi-download headline__topic__form-add__icon"></i>
+            <input
+              formControlName
+              #fileInput
+              type="file"
+              (change)="onFileSelected($event)"
+              style="display: none;"
+            />
+            <label>Headline Title</label>
+            <input type="text" class="headline__topic__form-add__input">
+          </form>
+        </div>
+      }
+      <i (click)="isCreateHeadlineFormVisible.set(!isCreateHeadlineFormVisible())"
+         class="bi bi-plus-square-fill headline__topic__icon"></i>
     </div>
   </div>
 </div>

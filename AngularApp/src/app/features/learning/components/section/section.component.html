@@ -2,14 +2,34 @@
   <div class="wrapper">
     <div class="section__title">Engage in Learning</div>
     <nav class="section__navigation">
-      @if (this.allSection$ | async; as sections) {
-        @for (section of sections; track section) {
+<!--      @if (this.allSection$ | async; as sections) {-->
+<!--        @for (section of sections; track section) {-->
+<!--          <div>-->
+<!--            <button (click)="changeHeadline(section.id)" class="section__navigation__element">{{ section.sectionName }}</button>-->
+<!--            <i (click)="isUpdateSectionFormVisible.set(!isUpdateSectionFormVisible())" class="bi bi-pencil section__navigation__pencil"></i>-->
+<!--            <i (click)="deleteSection(section.id)" class="bi bi-trash section__navigation__trash"></i>-->
+<!--          </div>-->
+<!--          @if (isUpdateSectionFormVisible()){-->
+<!--            <div class="section__navigation__update">-->
+<!--              <form [formGroup]="updateSectionFG" (ngSubmit)="putUpdateSection(section.id)">-->
+<!--                <input formControlName="id" type="text">-->
+<!--                <label class="section__navigation__update__label">Section Title</label>-->
+<!--                <input formControlName="title" class="section__navigation__update__input" type="text">-->
+<!--                <button class="section__navigation__update__button" type="submit">Edit</button>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          }-->
+
+<!--        }-->
+<!--      }-->
+<!--      @if (section(); as sections) {-->
+        @for (section of section(); track section) {
           <div>
-            <button (click)="changeSection(section.id)" class="section__navigation__element">{{ section.sectionName }}</button>
-            <i (click)="isUpdateSectionFromVisible.set(!isUpdateSectionFromVisible())" class="bi bi-pencil section__navigation__pencil"></i>
+            <button (click)="changeHeadline(section.id)" class="section__navigation__element">{{ section.sectionName }}</button>
+            <i (click)="isUpdateSectionFormVisible.set(!isUpdateSectionFormVisible())" class="bi bi-pencil section__navigation__pencil"></i>
             <i (click)="deleteSection(section.id)" class="bi bi-trash section__navigation__trash"></i>
           </div>
-          @if (isUpdateSectionFromVisible()){
+          @if (isUpdateSectionFormVisible()){
             <div class="section__navigation__update">
               <form [formGroup]="updateSectionFG" (ngSubmit)="putUpdateSection(section.id)">
                 <input formControlName="id" type="text">
@@ -21,8 +41,8 @@
           }
 
         }
-      }
-      @if (isAddSectionFromVisible()) {
+<!--      }-->
+      @if (isAddSectionFormVisible()) {
         <div class="section__navigation__add">
           <form [formGroup]="addSectionFG" (ngSubmit)="postAddSection()">
             <label class="section__navigation__add__label">Section Title</label>
@@ -31,7 +51,7 @@
           </form>
         </div>
       }
-      <button (click)="isAddSectionFromVisible.set(!isAddSectionFromVisible())" class="section__navigation__element">
+      <button (click)="isAddSectionFormVisible.set(!isAddSectionFormVisible())" class="section__navigation__element">
         + Add Section
       </button>
     </nav>
